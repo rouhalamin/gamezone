@@ -502,23 +502,6 @@ function showErr(m){const e=document.getElementById('authErr');e.textContent='�
 function showOk(m){const e=document.getElementById('authOk');e.textContent='✅ '+m;e.classList.add('on');document.getElementById('authErr').classList.remove('on');}
 function clearAlerts(){document.getElementById('authErr').classList.remove('on');document.getElementById('authOk').classList.remove('on');}
 
-function doLogin(){
-  clearAlerts();
-  const em=document.getElementById('lEmail').value.trim().toLowerCase();
-  const pw=document.getElementById('lPw').value;
-  const cap=document.getElementById('lCap').checked;
-  if(!em||!pw)return showErr('همه فیلدها الزامی است');
-  if(!isEmail(em))return showErr('فرمت ایمیل صحیح نیست');
-  if(!cap)return showErr('لطفاً تأیید کنید که ربات نیستید');
-  if(!rateOk(em))return showErr('بیش از حد تلاش کردید — ۱۵ دقیقه صبر کنید');
-  const users=DB.users();
-  const u=users.find(x=>x.email===em&&x.pw===hashPw(pw));
-  if(!u)return showErr('ایمیل یا رمز اشتباه است');
-  // Regular users cannot have admin role via normal login
-  const safeUser={...u,role:'user'};
-  DB.setSession(safeUser);
-  enterMain(safeUser);
-}
 
 function doReg(){
   clearAlerts();
