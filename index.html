@@ -1497,8 +1497,8 @@ nav::after {
         <div><label class="fl">لینک دانلود رسمی *</label><input class="fi" id="ag-link" placeholder="https://..."></div>
         <div><label class="fl">حجم</label><input class="fi" id="ag-size" placeholder="مثال: 4.5 GB"></div>
         <div>
-          <label class="fl">نام فایل تصویر (مثلاً: game.jpg)</label>
-          <input class="fi" id="ag-imgfile" placeholder="pubg.jpg — فایل رو کنار index.html بذار">
+          <label class="fl">نام فایل تصویر (مثلاً: game.webp)</label>
+          <input class="fi" id="ag-imgfile" placeholder="pubg.webp — فایل رو کنار index.html بذار">
         </div>
         <div>
           <label class="fl">یا آپلود تصویر مستقیم</label>
@@ -1652,25 +1652,25 @@ const DB = {
 
 // ── GAMES DATA ──
 const DEFAULT_GAMES = [
-  {id:1,name:'PUBG Mobile',dev:'Krafton',genre:'Battle Royale',plat:['📱 Android','🍎 iOS'],size:'700 MB',rating:4.3,emoji:'🔫',tag:'hot',free:true,imgFile:'pubg.jpg',desc:'محبوب‌ترین بازی Battle Royale موبایل با میلیون‌ها بازیکن در سراسر دنیا.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.tencent.ig',cls:'free'},{name:'App Store',icon:'🍎',sub:'iOS — رایگان',url:'https://apps.apple.com/app/pubg-mobile/id1330123889',cls:'free'}]},
-  {id:2,name:'GTA V',dev:'Rockstar Games',genre:'Action',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'95 GB',rating:4.8,emoji:'🚗',tag:'top',free:false,imgFile:'gtav.jpg',desc:'بزرگ‌ترین بازی دنیاباز. در شهر Los Santos زندگی کن.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/271590/',cls:''},{name:'Epic Games',icon:'🎮',sub:'PC — خرید',url:'https://store.epicgames.com/p/grand-theft-auto-v',cls:''}]},
-  {id:3,name:'Minecraft',dev:'Mojang Studios',genre:'Sandbox',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'1 GB',rating:4.9,emoji:'⛏️',tag:'top',free:false,imgFile:'minecraft.jpg',desc:'بازی خلاقانه‌ای که در آن می‌توانی هر چیزی بسازی!',links:[{name:'Minecraft.net',icon:'⛏️',sub:'PC — Java/Bedrock',url:'https://www.minecraft.net/download',cls:''}]},
-  {id:4,name:'Fortnite',dev:'Epic Games',genre:'Battle Royale',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'26 GB',rating:4.2,emoji:'🏗️',tag:'free',free:true,imgFile:'fortnite.jpg',desc:'بازی Battle Royale رایگان با سیستم ساخت و ساز منحصربه‌فرد.',links:[{name:'Epic Games Launcher',icon:'🎮',sub:'PC — رایگان',url:'https://www.epicgames.com/fortnite/download',cls:'free'}]},
-  {id:5,name:'Call of Duty: Warzone',dev:'Activision',genre:'Battle Royale',plat:['🖥️ PC','🎮 Console'],size:'80 GB',rating:4.1,emoji:'🪖',tag:'hot',free:true,imgFile:'warzone.jpg',desc:'بازی Battle Royale رایگان با گرافیک خیره‌کننده.',links:[{name:'Battle.net',icon:'⚔️',sub:'PC — رایگان',url:'https://www.callofduty.com/warzone',cls:'free'}]},
-  {id:6,name:'League of Legends',dev:'Riot Games',genre:'MOBA',plat:['🖥️ PC','💻 Mac'],size:'22 GB',rating:4.0,emoji:'⚔️',tag:'free',free:true,imgFile:'lol.jpg',desc:'محبوب‌ترین بازی MOBA دنیا.',links:[{name:'Riot Games',icon:'⚔️',sub:'PC/Mac — رایگان',url:'https://signup.leagueoflegends.com/',cls:'free'}]},
-  {id:7,name:'Valorant',dev:'Riot Games',genre:'FPS Tactical',plat:['🖥️ PC'],size:'20 GB',rating:4.5,emoji:'🎯',tag:'new',free:true,imgFile:'valorant.jpg',desc:'بازی تاکتیکال FPS رایگان از سازندگان League of Legends.',links:[{name:'Valorant.com',icon:'🎯',sub:'PC — رایگان',url:'https://playvalorant.com/download',cls:'free'}]},
-  {id:8,name:'FIFA 25',dev:'EA Sports',genre:'Sports',plat:['🖥️ PC','🎮 PS5','🎮 Xbox'],size:'50 GB',rating:4.0,emoji:'⚽',tag:'new',free:false,imgFile:'fifa25.jpg',desc:'جدیدترین نسخه محبوب‌ترین بازی فوتبال دنیا.',links:[{name:'EA App',icon:'⚽',sub:'PC — خرید',url:'https://www.ea.com/games/ea-sports-fc',cls:''}]},
-  {id:9,name:'Roblox',dev:'Roblox Corporation',genre:'Sandbox MMO',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'500 MB',rating:4.4,emoji:'🧱',tag:'free',free:true,imgFile:'roblox.jpg',desc:'پلتفرم بازی که در آن می‌توانی بازی بسازی یا بازی کنی!',links:[{name:'Roblox.com',icon:'🧱',sub:'PC — رایگان',url:'https://www.roblox.com/download',cls:'free'}]},
-  {id:10,name:'Apex Legends',dev:'Respawn Entertainment',genre:'Battle Royale',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'75 GB',rating:4.3,emoji:'🦾',tag:'free',free:true,imgFile:'apex.jpg',desc:'Battle Royale رایگان با قهرمانان منحصربه‌فرد.',links:[{name:'EA App / Steam',icon:'🦾',sub:'PC — رایگان',url:'https://www.ea.com/games/apex-legends/download',cls:'free'}]},
-  {id:11,name:'Clash of Clans',dev:'Supercell',genre:'Strategy',plat:['📱 Android','🍎 iOS'],size:'250 MB',rating:4.6,emoji:'🏰',tag:'top',free:true,imgFile:'coc.jpg',desc:'بازی استراتژی محبوب موبایل.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.supercell.clashofclans',cls:'free'}]},
-  {id:12,name:'Among Us',dev:'InnerSloth',genre:'Social Deduction',plat:['🖥️ PC','📱 Mobile'],size:'300 MB',rating:4.2,emoji:'👨‍🚀',tag:'',free:false,imgFile:'amongus.jpg',desc:'بازی خیانت و همکاری در فضا!',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/945360/',cls:''}]},
-  {id:13,name:'Genshin Impact',dev:'HoYoverse',genre:'Action RPG',plat:['🖥️ PC','📱 Mobile','🎮 PS4/5'],size:'70 GB',rating:4.7,emoji:'⚡',tag:'new',free:true,imgFile:'genshin.jpg',desc:'بازی RPG اکشن دنیاباز با گرافیک انیمه‌ای.',links:[{name:'Genshin Impact',icon:'⚡',sub:'PC/Mobile — رایگان',url:'https://genshin.hoyoverse.com/download',cls:'free'}]},
-  {id:14,name:'Counter-Strike 2',dev:'Valve',genre:'FPS Tactical',plat:['🖥️ PC'],size:'25 GB',rating:4.4,emoji:'💣',tag:'top',free:true,imgFile:'cs2.jpg',desc:'نسخه جدید محبوب‌ترین بازی FPS تاکتیکال تاریخ.',links:[{name:'Steam',icon:'💻',sub:'PC — رایگان',url:'https://store.steampowered.com/app/730/',cls:'free'}]},
-  {id:15,name:'Elden Ring',dev:'FromSoftware',genre:'Action RPG',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'60 GB',rating:4.9,emoji:'💀',tag:'top',free:false,imgFile:'eldenring.jpg',desc:'شاهکار FromSoftware — سخت‌ترین و زیباترین RPG اکشن تاریخ.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1245620/',cls:''}]},
-  {id:16,name:'Red Dead Redemption 2',dev:'Rockstar Games',genre:'Action Adventure',plat:['🖥️ PC','🎮 PS4','🎮 Xbox'],size:'120 GB',rating:4.9,emoji:'🤠',tag:'top',free:false,imgFile:'rdr2.jpg',desc:'شاهکار Rockstar در دنیای وسترن.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1174180/',cls:''}]},
-  {id:17,name:'The Witcher 3',dev:'CD Projekt Red',genre:'RPG',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'50 GB',rating:4.9,emoji:'🧙',tag:'top',free:false,imgFile:'witcher3.jpg',desc:'بهترین بازی RPG تاریخ با داستانی بی‌نظیر.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/292030/',cls:''}]},
-  {id:18,name:'Cyberpunk 2077',dev:'CD Projekt Red',genre:'RPG FPS',plat:['🖥️ PC','🎮 PS5','🎮 Xbox X'],size:'70 GB',rating:4.5,emoji:'🤖',tag:'new',free:false,imgFile:'cyberpunk.jpg',desc:'بازی RPG آینده‌نگرانه در شهر Night City.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1091500/',cls:''}]},
-  {id:19,name:'Subway Surfers',dev:'Kiloo',genre:'Endless Runner',plat:['📱 Android','🍎 iOS'],size:'200 MB',rating:4.5,emoji:'🛹',tag:'',free:true,imgFile:'subwaysurfers.jpg',desc:'محبوب‌ترین بازی دو موبایل.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf',cls:'free'}]},
+  {id:1,name:'PUBG Mobile',dev:'Krafton',genre:'Battle Royale',plat:['📱 Android','🍎 iOS'],size:'700 MB',rating:4.3,emoji:'🔫',tag:'hot',free:true,imgFile:'pubg.webp',desc:'محبوب‌ترین بازی Battle Royale موبایل با میلیون‌ها بازیکن در سراسر دنیا.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.tencent.ig',cls:'free'},{name:'App Store',icon:'🍎',sub:'iOS — رایگان',url:'https://apps.apple.com/app/pubg-mobile/id1330123889',cls:'free'}]},
+  {id:2,name:'GTA V',dev:'Rockstar Games',genre:'Action',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'95 GB',rating:4.8,emoji:'🚗',tag:'top',free:false,imgFile:'gtav.webp',desc:'بزرگ‌ترین بازی دنیاباز. در شهر Los Santos زندگی کن.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/271590/',cls:''},{name:'Epic Games',icon:'🎮',sub:'PC — خرید',url:'https://store.epicgames.com/p/grand-theft-auto-v',cls:''}]},
+  {id:3,name:'Minecraft',dev:'Mojang Studios',genre:'Sandbox',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'1 GB',rating:4.9,emoji:'⛏️',tag:'top',free:false,imgFile:'minecraft.webp',desc:'بازی خلاقانه‌ای که در آن می‌توانی هر چیزی بسازی!',links:[{name:'Minecraft.net',icon:'⛏️',sub:'PC — Java/Bedrock',url:'https://www.minecraft.net/download',cls:''}]},
+  {id:4,name:'Fortnite',dev:'Epic Games',genre:'Battle Royale',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'26 GB',rating:4.2,emoji:'🏗️',tag:'free',free:true,imgFile:'fortnite.webp',desc:'بازی Battle Royale رایگان با سیستم ساخت و ساز منحصربه‌فرد.',links:[{name:'Epic Games Launcher',icon:'🎮',sub:'PC — رایگان',url:'https://www.epicgames.com/fortnite/download',cls:'free'}]},
+  {id:5,name:'Call of Duty: Warzone',dev:'Activision',genre:'Battle Royale',plat:['🖥️ PC','🎮 Console'],size:'80 GB',rating:4.1,emoji:'🪖',tag:'hot',free:true,imgFile:'warzone.webp',desc:'بازی Battle Royale رایگان با گرافیک خیره‌کننده.',links:[{name:'Battle.net',icon:'⚔️',sub:'PC — رایگان',url:'https://www.callofduty.com/warzone',cls:'free'}]},
+  {id:6,name:'League of Legends',dev:'Riot Games',genre:'MOBA',plat:['🖥️ PC','💻 Mac'],size:'22 GB',rating:4.0,emoji:'⚔️',tag:'free',free:true,imgFile:'lol.webp',desc:'محبوب‌ترین بازی MOBA دنیا.',links:[{name:'Riot Games',icon:'⚔️',sub:'PC/Mac — رایگان',url:'https://signup.leagueoflegends.com/',cls:'free'}]},
+  {id:7,name:'Valorant',dev:'Riot Games',genre:'FPS Tactical',plat:['🖥️ PC'],size:'20 GB',rating:4.5,emoji:'🎯',tag:'new',free:true,imgFile:'valorant.webp',desc:'بازی تاکتیکال FPS رایگان از سازندگان League of Legends.',links:[{name:'Valorant.com',icon:'🎯',sub:'PC — رایگان',url:'https://playvalorant.com/download',cls:'free'}]},
+  {id:8,name:'FIFA 25',dev:'EA Sports',genre:'Sports',plat:['🖥️ PC','🎮 PS5','🎮 Xbox'],size:'50 GB',rating:4.0,emoji:'⚽',tag:'new',free:false,imgFile:'fifa25.webp',desc:'جدیدترین نسخه محبوب‌ترین بازی فوتبال دنیا.',links:[{name:'EA App',icon:'⚽',sub:'PC — خرید',url:'https://www.ea.com/games/ea-sports-fc',cls:''}]},
+  {id:9,name:'Roblox',dev:'Roblox Corporation',genre:'Sandbox MMO',plat:['🖥️ PC','📱 Mobile','🎮 Console'],size:'500 MB',rating:4.4,emoji:'🧱',tag:'free',free:true,imgFile:'roblox.webp',desc:'پلتفرم بازی که در آن می‌توانی بازی بسازی یا بازی کنی!',links:[{name:'Roblox.com',icon:'🧱',sub:'PC — رایگان',url:'https://www.roblox.com/download',cls:'free'}]},
+  {id:10,name:'Apex Legends',dev:'Respawn Entertainment',genre:'Battle Royale',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'75 GB',rating:4.3,emoji:'🦾',tag:'free',free:true,imgFile:'apex.webp',desc:'Battle Royale رایگان با قهرمانان منحصربه‌فرد.',links:[{name:'EA App / Steam',icon:'🦾',sub:'PC — رایگان',url:'https://www.ea.com/games/apex-legends/download',cls:'free'}]},
+  {id:11,name:'Clash of Clans',dev:'Supercell',genre:'Strategy',plat:['📱 Android','🍎 iOS'],size:'250 MB',rating:4.6,emoji:'🏰',tag:'top',free:true,imgFile:'coc.webp',desc:'بازی استراتژی محبوب موبایل.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.supercell.clashofclans',cls:'free'}]},
+  {id:12,name:'Among Us',dev:'InnerSloth',genre:'Social Deduction',plat:['🖥️ PC','📱 Mobile'],size:'300 MB',rating:4.2,emoji:'👨‍🚀',tag:'',free:false,imgFile:'amongus.webp',desc:'بازی خیانت و همکاری در فضا!',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/945360/',cls:''}]},
+  {id:13,name:'Genshin Impact',dev:'HoYoverse',genre:'Action RPG',plat:['🖥️ PC','📱 Mobile','🎮 PS4/5'],size:'70 GB',rating:4.7,emoji:'⚡',tag:'new',free:true,imgFile:'genshin.webp',desc:'بازی RPG اکشن دنیاباز با گرافیک انیمه‌ای.',links:[{name:'Genshin Impact',icon:'⚡',sub:'PC/Mobile — رایگان',url:'https://genshin.hoyoverse.com/download',cls:'free'}]},
+  {id:14,name:'Counter-Strike 2',dev:'Valve',genre:'FPS Tactical',plat:['🖥️ PC'],size:'25 GB',rating:4.4,emoji:'💣',tag:'top',free:true,imgFile:'cs2.webp',desc:'نسخه جدید محبوب‌ترین بازی FPS تاکتیکال تاریخ.',links:[{name:'Steam',icon:'💻',sub:'PC — رایگان',url:'https://store.steampowered.com/app/730/',cls:'free'}]},
+  {id:15,name:'Elden Ring',dev:'FromSoftware',genre:'Action RPG',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'60 GB',rating:4.9,emoji:'💀',tag:'top',free:false,imgFile:'eldenring.webp',desc:'شاهکار FromSoftware — سخت‌ترین و زیباترین RPG اکشن تاریخ.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1245620/',cls:''}]},
+  {id:16,name:'Red Dead Redemption 2',dev:'Rockstar Games',genre:'Action Adventure',plat:['🖥️ PC','🎮 PS4','🎮 Xbox'],size:'120 GB',rating:4.9,emoji:'🤠',tag:'top',free:false,imgFile:'rdr2.webp',desc:'شاهکار Rockstar در دنیای وسترن.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1174180/',cls:''}]},
+  {id:17,name:'The Witcher 3',dev:'CD Projekt Red',genre:'RPG',plat:['🖥️ PC','🎮 PS4/5','🎮 Xbox'],size:'50 GB',rating:4.9,emoji:'🧙',tag:'top',free:false,imgFile:'witcher3.webp',desc:'بهترین بازی RPG تاریخ با داستانی بی‌نظیر.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/292030/',cls:''}]},
+  {id:18,name:'Cyberpunk 2077',dev:'CD Projekt Red',genre:'RPG FPS',plat:['🖥️ PC','🎮 PS5','🎮 Xbox X'],size:'70 GB',rating:4.5,emoji:'🤖',tag:'new',free:false,imgFile:'cyberpunk.webp',desc:'بازی RPG آینده‌نگرانه در شهر Night City.',links:[{name:'Steam',icon:'💻',sub:'PC — خرید',url:'https://store.steampowered.com/app/1091500/',cls:''}]},
+  {id:19,name:'Subway Surfers',dev:'Kiloo',genre:'Endless Runner',plat:['📱 Android','🍎 iOS'],size:'200 MB',rating:4.5,emoji:'🛹',tag:'',free:true,imgFile:'subwaysurfers.webp',desc:'محبوب‌ترین بازی دو موبایل.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf',cls:'free'}]},
   {id:20,name:'Candy Crush Saga',dev:'King',genre:'Puzzle',plat:['📱 Android','🍎 iOS'],size:'120 MB',rating:4.4,emoji:'🍬',tag:'',free:true,imgFile:'candycrush.webp',desc:'محبوب‌ترین بازی پازل موبایل با میلیاردها بازیکن.',links:[{name:'Google Play',icon:'🤖',sub:'Android — رایگان',url:'https://play.google.com/store/apps/details?id=com.king.candycrushsaga',cls:'free'}]},
 ];
 
@@ -2066,14 +2066,12 @@ const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 
 window.doGoogleAuth = async function() {
-  // Disable buttons during auth
   const btns = document.querySelectorAll('.btn-google');
   btns.forEach(b => b.classList.add('loading'));
   try {
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
 
-    // Save to Firestore if new user
     const { getDoc, doc, setDoc } = await import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js");
     const userRef = doc(db, "users", user.uid);
     const userSnap = await getDoc(userRef);
@@ -2086,7 +2084,6 @@ window.doGoogleAuth = async function() {
       });
     }
 
-    // Update nav UI
     const name = user.displayName || "کاربر گوگل";
     document.getElementById("navAv").textContent = name.charAt(0).toUpperCase();
     document.getElementById("navNm").textContent = name;
