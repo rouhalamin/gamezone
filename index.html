@@ -39,6 +39,74 @@
   --shadow-card: 0 16px 48px rgba(0,0,0,.55);
 }
 
+
+/* ── HERO LAYOUT FIX ── */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ── CREDITS ROLL ── */
+.credits-wrap {
+  width: 340px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+.credits-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: credits-scroll 90s linear infinite;
+  will-change: transform;
+}
+.credits-track:hover { animation-play-state: paused; }
+@keyframes credits-scroll {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+.credit-line {
+  padding: .32rem 0;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.credit-line.section-head {
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--acc);
+  padding: .9rem 0 .3rem;
+  filter: drop-shadow(0 0 8px rgba(255,107,43,.6));
+}
+.credit-line.item {
+  font-size: .78rem;
+  color: rgba(238,242,255,.65);
+  font-weight: 500;
+}
+.credit-line.highlight {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--acc2);
+}
+.credit-line.dim {
+  font-size: .7rem;
+  color: rgba(238,242,255,.3);
+  font-style: italic;
+}
+.credit-line.spacer { height: .6rem; }
+.credit-line.divider {
+  font-size: .65rem;
+  color: rgba(255,107,43,.3);
+  letter-spacing: 4px;
+}
+
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
@@ -1045,7 +1113,343 @@ nav::after {
         </div>
       </div>
       <div class="hero-right">
-        <span class="hero-emoji">🕹️</span>
+        <div class="credits-wrap">
+          <div class="credits-track" id="creditsTrack">
+            <!-- Block 1 -->
+            <div class="credit-line section-head">GameZone</div>
+            <div class="credit-line highlight">بهترین مرکز دانلود بازی</div>
+            <div class="credit-line item">هزاران بازی در یک جا</div>
+            <div class="credit-line item">رایگان، سریع، مطمئن</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">بازی‌های برتر</div>
+            <div class="credit-line highlight">PUBG Mobile</div>
+            <div class="credit-line item">محبوب‌ترین Battle Royale موبایل</div>
+            <div class="credit-line highlight">GTA V</div>
+            <div class="credit-line item">بزرگ‌ترین دنیای باز تاریخ</div>
+            <div class="credit-line highlight">Minecraft</div>
+            <div class="credit-line item">خلاقیت بی‌پایان در یک بازی</div>
+            <div class="credit-line highlight">Fortnite</div>
+            <div class="credit-line item">Battle Royale رایگان Epic Games</div>
+            <div class="credit-line highlight">Valorant</div>
+            <div class="credit-line item">تاکتیک و دقت در هر راند</div>
+            <div class="credit-line highlight">Counter-Strike 2</div>
+            <div class="credit-line item">افسانه‌ای که هرگز کهنه نمی‌شود</div>
+            <div class="credit-line highlight">Elden Ring</div>
+            <div class="credit-line item">شاهکاری که تاریخ را تغییر داد</div>
+            <div class="credit-line highlight">The Witcher 3</div>
+            <div class="credit-line item">بهترین داستان در تاریخ بازی</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">ویژگی‌های ما</div>
+            <div class="credit-line item">🔗 لینک مستقیم به سرورهای رسمی</div>
+            <div class="credit-line item">✅ تمام بازی‌ها تأیید شده</div>
+            <div class="credit-line item">🚀 دانلود سریع و بدون تبلیغ</div>
+            <div class="credit-line item">🔒 امنیت کامل کاربران</div>
+            <div class="credit-line item">📱 پشتیبانی از تمام پلتفرم‌ها</div>
+            <div class="credit-line item">🆓 صد‌در‌صد رایگان برای همیشه</div>
+            <div class="credit-line item">🌙 طراحی تاریک و زیبا</div>
+            <div class="credit-line item">⚡ بروزرسانی روزانه بازی‌ها</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">ژانرها</div>
+            <div class="credit-line item">🔫 Battle Royale</div>
+            <div class="credit-line item">⚔️ Action RPG</div>
+            <div class="credit-line item">🏗️ Sandbox</div>
+            <div class="credit-line item">🎯 FPS Tactical</div>
+            <div class="credit-line item">🏰 Strategy</div>
+            <div class="credit-line item">⚽ Sports</div>
+            <div class="credit-line item">🧙 RPG</div>
+            <div class="credit-line item">🤖 Sci-Fi RPG</div>
+            <div class="credit-line item">🛹 Endless Runner</div>
+            <div class="credit-line item">🍬 Puzzle</div>
+            <div class="credit-line item">👨‍🚀 Social Deduction</div>
+            <div class="credit-line item">⚡ Action Adventure</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">پلتفرم‌ها</div>
+            <div class="credit-line item">🖥️ Windows PC</div>
+            <div class="credit-line item">💻 Mac OS</div>
+            <div class="credit-line item">📱 Android</div>
+            <div class="credit-line item">🍎 iOS / iPhone</div>
+            <div class="credit-line item">🎮 PlayStation 4 / 5</div>
+            <div class="credit-line item">🎮 Xbox One / Series X</div>
+            <div class="credit-line item">🎮 Nintendo Switch</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">سازندگان برتر</div>
+            <div class="credit-line highlight">Rockstar Games</div>
+            <div class="credit-line item">سازنده GTA و Red Dead Redemption</div>
+            <div class="credit-line highlight">CD Projekt Red</div>
+            <div class="credit-line item">سازنده Witcher و Cyberpunk</div>
+            <div class="credit-line highlight">FromSoftware</div>
+            <div class="credit-line item">سازنده Elden Ring و Dark Souls</div>
+            <div class="credit-line highlight">Riot Games</div>
+            <div class="credit-line item">سازنده Valorant و League of Legends</div>
+            <div class="credit-line highlight">Epic Games</div>
+            <div class="credit-line item">سازنده Fortnite و Unreal Engine</div>
+            <div class="credit-line highlight">Valve</div>
+            <div class="credit-line item">سازنده CS2 و Steam</div>
+            <div class="credit-line highlight">Mojang Studios</div>
+            <div class="credit-line item">سازنده Minecraft</div>
+            <div class="credit-line highlight">Krafton</div>
+            <div class="credit-line item">سازنده PUBG Mobile</div>
+            <div class="credit-line highlight">Activision</div>
+            <div class="credit-line item">سازنده Call of Duty</div>
+            <div class="credit-line highlight">HoYoverse</div>
+            <div class="credit-line item">سازنده Genshin Impact</div>
+            <div class="credit-line highlight">Supercell</div>
+            <div class="credit-line item">سازنده Clash of Clans</div>
+            <div class="credit-line highlight">EA Sports</div>
+            <div class="credit-line item">سازنده FIFA و Apex Legends</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">تیم GameZone</div>
+            <div class="credit-line highlight">طراحی و توسعه</div>
+            <div class="credit-line item">با عشق ساخته شد ❤️</div>
+            <div class="credit-line item">برای گیمرهای ایرانی</div>
+            <div class="credit-line highlight">فناوری‌های استفاده‌شده</div>
+            <div class="credit-line item">Firebase Authentication</div>
+            <div class="credit-line item">Firebase Firestore</div>
+            <div class="credit-line item">Google Sign-In</div>
+            <div class="credit-line item">HTML5 + CSS3 + JavaScript</div>
+            <div class="credit-line item">Vazirmatn Font</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">چرا GameZone؟</div>
+            <div class="credit-line item">چون دانلود بازی باید ساده باشد</div>
+            <div class="credit-line item">چون همه لایق بهترین بازی‌ها هستند</div>
+            <div class="credit-line item">چون گیمر ایرانی کم از هیچ‌کس ندارد</div>
+            <div class="credit-line item">چون لینک‌های مستقیم بهترند</div>
+            <div class="credit-line item">چون تبلیغات آزاردهنده‌اند</div>
+            <div class="credit-line item">چون سرعت مهم است</div>
+            <div class="credit-line item">چون امنیت مهم‌تر است</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">آمار سایت</div>
+            <div class="credit-line item">بیش از ۲۰ بازی برتر دنیا</div>
+            <div class="credit-line item">پشتیبانی از ۷ پلتفرم مختلف</div>
+            <div class="credit-line item">بیش از ۱۲ ژانر متنوع</div>
+            <div class="credit-line item">۱۰۰٪ لینک‌های رسمی و معتبر</div>
+            <div class="credit-line item">بروزرسانی مداوم محتوا</div>
+            <div class="credit-line item">پشتیبانی کامل از زبان فارسی</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">بازی‌های رایگان</div>
+            <div class="credit-line item">🔫 PUBG Mobile — رایگان</div>
+            <div class="credit-line item">🏗️ Fortnite — رایگان</div>
+            <div class="credit-line item">🪖 Call of Duty Warzone — رایگان</div>
+            <div class="credit-line item">⚔️ League of Legends — رایگان</div>
+            <div class="credit-line item">🎯 Valorant — رایگان</div>
+            <div class="credit-line item">🧱 Roblox — رایگان</div>
+            <div class="credit-line item">🦾 Apex Legends — رایگان</div>
+            <div class="credit-line item">🏰 Clash of Clans — رایگان</div>
+            <div class="credit-line item">⚡ Genshin Impact — رایگان</div>
+            <div class="credit-line item">💣 Counter-Strike 2 — رایگان</div>
+            <div class="credit-line item">🛹 Subway Surfers — رایگان</div>
+            <div class="credit-line item">🍬 Candy Crush Saga — رایگان</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">نکات جالب</div>
+            <div class="credit-line item">Minecraft پرفروش‌ترین بازی تاریخ است</div>
+            <div class="credit-line item">GTA V در ۱۱ سال ۱۹۰ میلیون نسخه فروخت</div>
+            <div class="credit-line item">PUBG Mobile ماهانه ۱۰۰ میلیون بازیکن دارد</div>
+            <div class="credit-line item">Fortnite در یک روز ۱ میلیون بازیکن جمع کرد</div>
+            <div class="credit-line item">Elden Ring ۲۵ میلیون نسخه فروخت</div>
+            <div class="credit-line item">Candy Crush روزانه ۲۷۳ میلیون بازیکن دارد</div>
+            <div class="credit-line item">The Witcher 3 بیش از ۲۰۰ جایزه گرفت</div>
+            <div class="credit-line item">Counter-Strike از سال ۲۰۰۰ هنوز محبوب است</div>
+            <div class="credit-line item">Roblox توسط کاربران ساخته می‌شود</div>
+            <div class="credit-line item">League of Legends مسابقات جهانی دارد</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">توصیه‌های ما</div>
+            <div class="credit-line item">اگه تازه‌کاری: Minecraft را امتحان کن</div>
+            <div class="credit-line item">اگه FPS دوست داری: Valorant یا CS2</div>
+            <div class="credit-line item">اگه داستان می‌خوای: Witcher 3</div>
+            <div class="credit-line item">اگه رایگان می‌خوای: Fortnite یا Apex</div>
+            <div class="credit-line item">اگه موبایل داری: PUBG یا Clash of Clans</div>
+            <div class="credit-line item">اگه چالش می‌خوای: Elden Ring</div>
+            <div class="credit-line item">اگه دوستانه بازی می‌کنی: Among Us</div>
+            <div class="credit-line item">اگه RPG دوست داری: Genshin Impact</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">پیام ما</div>
+            <div class="credit-line item">GameZone برای شما ساخته شده</div>
+            <div class="credit-line item">هر روز بهتر از دیروز</div>
+            <div class="credit-line item">گیم کن، لذت ببر 🎮</div>
+            <div class="credit-line dim">— تیم GameZone —</div>
+            <div class="credit-line divider">· · · · · · · · · ·</div>
+            <div class="credit-line spacer"></div>
+
+            <!-- Block 2 — exact repeat for seamless infinite loop -->
+            <div class="credit-line section-head">GameZone</div>
+            <div class="credit-line highlight">بهترین مرکز دانلود بازی</div>
+            <div class="credit-line item">هزاران بازی در یک جا</div>
+            <div class="credit-line item">رایگان، سریع، مطمئن</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">بازی‌های برتر</div>
+            <div class="credit-line highlight">PUBG Mobile</div>
+            <div class="credit-line item">محبوب‌ترین Battle Royale موبایل</div>
+            <div class="credit-line highlight">GTA V</div>
+            <div class="credit-line item">بزرگ‌ترین دنیای باز تاریخ</div>
+            <div class="credit-line highlight">Minecraft</div>
+            <div class="credit-line item">خلاقیت بی‌پایان در یک بازی</div>
+            <div class="credit-line highlight">Fortnite</div>
+            <div class="credit-line item">Battle Royale رایگان Epic Games</div>
+            <div class="credit-line highlight">Valorant</div>
+            <div class="credit-line item">تاکتیک و دقت در هر راند</div>
+            <div class="credit-line highlight">Counter-Strike 2</div>
+            <div class="credit-line item">افسانه‌ای که هرگز کهنه نمی‌شود</div>
+            <div class="credit-line highlight">Elden Ring</div>
+            <div class="credit-line item">شاهکاری که تاریخ را تغییر داد</div>
+            <div class="credit-line highlight">The Witcher 3</div>
+            <div class="credit-line item">بهترین داستان در تاریخ بازی</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">ویژگی‌های ما</div>
+            <div class="credit-line item">🔗 لینک مستقیم به سرورهای رسمی</div>
+            <div class="credit-line item">✅ تمام بازی‌ها تأیید شده</div>
+            <div class="credit-line item">🚀 دانلود سریع و بدون تبلیغ</div>
+            <div class="credit-line item">🔒 امنیت کامل کاربران</div>
+            <div class="credit-line item">📱 پشتیبانی از تمام پلتفرم‌ها</div>
+            <div class="credit-line item">🆓 صد‌در‌صد رایگان برای همیشه</div>
+            <div class="credit-line item">🌙 طراحی تاریک و زیبا</div>
+            <div class="credit-line item">⚡ بروزرسانی روزانه بازی‌ها</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">ژانرها</div>
+            <div class="credit-line item">🔫 Battle Royale</div>
+            <div class="credit-line item">⚔️ Action RPG</div>
+            <div class="credit-line item">🏗️ Sandbox</div>
+            <div class="credit-line item">🎯 FPS Tactical</div>
+            <div class="credit-line item">🏰 Strategy</div>
+            <div class="credit-line item">⚽ Sports</div>
+            <div class="credit-line item">🧙 RPG</div>
+            <div class="credit-line item">🤖 Sci-Fi RPG</div>
+            <div class="credit-line item">🛹 Endless Runner</div>
+            <div class="credit-line item">🍬 Puzzle</div>
+            <div class="credit-line item">👨‍🚀 Social Deduction</div>
+            <div class="credit-line item">⚡ Action Adventure</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">پلتفرم‌ها</div>
+            <div class="credit-line item">🖥️ Windows PC</div>
+            <div class="credit-line item">💻 Mac OS</div>
+            <div class="credit-line item">📱 Android</div>
+            <div class="credit-line item">🍎 iOS / iPhone</div>
+            <div class="credit-line item">🎮 PlayStation 4 / 5</div>
+            <div class="credit-line item">🎮 Xbox One / Series X</div>
+            <div class="credit-line item">🎮 Nintendo Switch</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">سازندگان برتر</div>
+            <div class="credit-line highlight">Rockstar Games</div>
+            <div class="credit-line item">سازنده GTA و Red Dead Redemption</div>
+            <div class="credit-line highlight">CD Projekt Red</div>
+            <div class="credit-line item">سازنده Witcher و Cyberpunk</div>
+            <div class="credit-line highlight">FromSoftware</div>
+            <div class="credit-line item">سازنده Elden Ring و Dark Souls</div>
+            <div class="credit-line highlight">Riot Games</div>
+            <div class="credit-line item">سازنده Valorant و League of Legends</div>
+            <div class="credit-line highlight">Epic Games</div>
+            <div class="credit-line item">سازنده Fortnite و Unreal Engine</div>
+            <div class="credit-line highlight">Valve</div>
+            <div class="credit-line item">سازنده CS2 و Steam</div>
+            <div class="credit-line highlight">Mojang Studios</div>
+            <div class="credit-line item">سازنده Minecraft</div>
+            <div class="credit-line highlight">Krafton</div>
+            <div class="credit-line item">سازنده PUBG Mobile</div>
+            <div class="credit-line highlight">Activision</div>
+            <div class="credit-line item">سازنده Call of Duty</div>
+            <div class="credit-line highlight">HoYoverse</div>
+            <div class="credit-line item">سازنده Genshin Impact</div>
+            <div class="credit-line highlight">Supercell</div>
+            <div class="credit-line item">سازنده Clash of Clans</div>
+            <div class="credit-line highlight">EA Sports</div>
+            <div class="credit-line item">سازنده FIFA و Apex Legends</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">تیم GameZone</div>
+            <div class="credit-line highlight">طراحی و توسعه</div>
+            <div class="credit-line item">با عشق ساخته شد ❤️</div>
+            <div class="credit-line item">برای گیمرهای ایرانی</div>
+            <div class="credit-line highlight">فناوری‌های استفاده‌شده</div>
+            <div class="credit-line item">Firebase Authentication</div>
+            <div class="credit-line item">Firebase Firestore</div>
+            <div class="credit-line item">Google Sign-In</div>
+            <div class="credit-line item">HTML5 + CSS3 + JavaScript</div>
+            <div class="credit-line item">Vazirmatn Font</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">چرا GameZone؟</div>
+            <div class="credit-line item">چون دانلود بازی باید ساده باشد</div>
+            <div class="credit-line item">چون همه لایق بهترین بازی‌ها هستند</div>
+            <div class="credit-line item">چون گیمر ایرانی کم از هیچ‌کس ندارد</div>
+            <div class="credit-line item">چون لینک‌های مستقیم بهترند</div>
+            <div class="credit-line item">چون تبلیغات آزاردهنده‌اند</div>
+            <div class="credit-line item">چون سرعت مهم است</div>
+            <div class="credit-line item">چون امنیت مهم‌تر است</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">آمار سایت</div>
+            <div class="credit-line item">بیش از ۲۰ بازی برتر دنیا</div>
+            <div class="credit-line item">پشتیبانی از ۷ پلتفرم مختلف</div>
+            <div class="credit-line item">بیش از ۱۲ ژانر متنوع</div>
+            <div class="credit-line item">۱۰۰٪ لینک‌های رسمی و معتبر</div>
+            <div class="credit-line item">بروزرسانی مداوم محتوا</div>
+            <div class="credit-line item">پشتیبانی کامل از زبان فارسی</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">بازی‌های رایگان</div>
+            <div class="credit-line item">🔫 PUBG Mobile — رایگان</div>
+            <div class="credit-line item">🏗️ Fortnite — رایگان</div>
+            <div class="credit-line item">🪖 Call of Duty Warzone — رایگان</div>
+            <div class="credit-line item">⚔️ League of Legends — رایگان</div>
+            <div class="credit-line item">🎯 Valorant — رایگان</div>
+            <div class="credit-line item">🧱 Roblox — رایگان</div>
+            <div class="credit-line item">🦾 Apex Legends — رایگان</div>
+            <div class="credit-line item">🏰 Clash of Clans — رایگان</div>
+            <div class="credit-line item">⚡ Genshin Impact — رایگان</div>
+            <div class="credit-line item">💣 Counter-Strike 2 — رایگان</div>
+            <div class="credit-line item">🛹 Subway Surfers — رایگان</div>
+            <div class="credit-line item">🍬 Candy Crush Saga — رایگان</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">نکات جالب</div>
+            <div class="credit-line item">Minecraft پرفروش‌ترین بازی تاریخ است</div>
+            <div class="credit-line item">GTA V در ۱۱ سال ۱۹۰ میلیون نسخه فروخت</div>
+            <div class="credit-line item">PUBG Mobile ماهانه ۱۰۰ میلیون بازیکن دارد</div>
+            <div class="credit-line item">Fortnite در یک روز ۱ میلیون بازیکن جمع کرد</div>
+            <div class="credit-line item">Elden Ring ۲۵ میلیون نسخه فروخت</div>
+            <div class="credit-line item">Candy Crush روزانه ۲۷۳ میلیون بازیکن دارد</div>
+            <div class="credit-line item">The Witcher 3 بیش از ۲۰۰ جایزه گرفت</div>
+            <div class="credit-line item">Counter-Strike از سال ۲۰۰۰ هنوز محبوب است</div>
+            <div class="credit-line item">Roblox توسط کاربران ساخته می‌شود</div>
+            <div class="credit-line item">League of Legends مسابقات جهانی دارد</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">توصیه‌های ما</div>
+            <div class="credit-line item">اگه تازه‌کاری: Minecraft را امتحان کن</div>
+            <div class="credit-line item">اگه FPS دوست داری: Valorant یا CS2</div>
+            <div class="credit-line item">اگه داستان می‌خوای: Witcher 3</div>
+            <div class="credit-line item">اگه رایگان می‌خوای: Fortnite یا Apex</div>
+            <div class="credit-line item">اگه موبایل داری: PUBG یا Clash of Clans</div>
+            <div class="credit-line item">اگه چالش می‌خوای: Elden Ring</div>
+            <div class="credit-line item">اگه دوستانه بازی می‌کنی: Among Us</div>
+            <div class="credit-line item">اگه RPG دوست داری: Genshin Impact</div>
+            <div class="credit-line spacer"></div>
+
+            <div class="credit-line section-head">پیام ما</div>
+            <div class="credit-line item">GameZone برای شما ساخته شده</div>
+            <div class="credit-line item">هر روز بهتر از دیروز</div>
+            <div class="credit-line item">گیم کن، لذت ببر 🎮</div>
+            <div class="credit-line dim">— تیم GameZone —</div>
+            <div class="credit-line divider">· · · · · · · · · ·</div>
+            <div class="credit-line spacer"></div>
+          </div>
+        </div>
       </div>
     </div>
 
